@@ -1,0 +1,42 @@
+/* This is the animation code. */
+#block {
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+#ball {
+  width: 50px;
+  height: 50px;
+  background: purple;
+  position: absolute;
+  bottom: 0;
+  left: 125px;
+  border-radius: 50px;
+  -webkit-animation: ball 5s;
+  -webkit-transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes ball {
+  0% { -webkit-transform: translateY(-300px) scaleY(1.2); }
+  25% { -webkit-transform: translateY(0px) scaleY(1.2); }
+  35% { -webkit-transform: translateY(1px) scaleY(0.8); }
+  66% { -webkit-transform: translateY(-100px) scaleY(1.2); }
+  75% { -webkit-transform: translateY(0px) scaleY(1.2); }
+  85% { -webkit-transform: translateY(1px) scaleY(0.8); }
+  95% { -webkit-transform: translateY(-100px) scaleY(1.2); }
+  100% { -webkit-transform: translateY(0px); }
+}
+
+/* This is the element that we apply the animation to. */
+#ball {
+  -webkit-animation-name: ball;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-timing-function: ease; /* ease is the default */
+  -webkit-animation-delay: 1s;             /* 0 is the default */
+  -webkit-animation-iteration-count: 1;    /* 1 is the default */
+  -webkit-animation-direction: alternate-revarse;  /* normal is the default */
+}
